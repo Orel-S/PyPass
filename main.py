@@ -1,4 +1,9 @@
 import random
+import msvcrt as visualc
+
+
+def wait_for_input():
+    visualc.getch()
 
 
 def input_checker(message):
@@ -32,5 +37,5 @@ print("Here are your passwords:")
 for x in passwordArray:
     print(str(counter) + ". " + x)
     counter += 1
-input("Press anything to exit...")
+wait_for_input()
 
