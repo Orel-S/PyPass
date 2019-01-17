@@ -22,11 +22,11 @@ chars = str('abcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()+|}{":?><,./;[]')
 password = ''
 passwordArray = []
 numOfPasswords = input_checker("How many passwords would you like to generate?")
-counter = 1
-passwordCounter = 1
+passwordConstructCounter = 1
+numOfPasswordCounter = 1
 for p in range(numOfPasswords):
-    passwordLength = input_checker("How long would you like password " + str(passwordCounter) + " to be?")
-    passwordCounter += 1
+    passwordLength = input_checker("How long would you like password " + str(numOfPasswordCounter) + " to be?")
+    numOfPasswordCounter += 1
     removedCharacters = str(input("Which characters are disallowed?"))
     chars = chars.translate(str.maketrans('', '', removedCharacters))
     for c in range(int(passwordLength)):
@@ -35,7 +35,7 @@ for p in range(numOfPasswords):
     password = ''
 print("Here are your passwords:")
 for x in passwordArray:
-    print(str(counter) + ". " + x)
-    counter += 1
+    print(str(passwordConstructCounter) + ". " + x)
+    passwordConstructCounter += 1
 wait_for_input()
 
