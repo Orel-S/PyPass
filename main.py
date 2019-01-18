@@ -61,6 +61,7 @@ def read_passwords():
     passwords = stored_pass.read()
     print(passwords)
     stored_pass.close()
+    input("Press Enter to continue")
 
 def main():
     readOrWrite = str(input("Would you like to read or write passwords?"))
