@@ -41,13 +41,12 @@ for p in range(numOfPasswords):
     for c in range(int(passwordLength)):
         password += random.choice(chars)
     passwordArray.append(password)
+    chars = str('abcdefghijklmnopqrstuvwxyz1234567890~!@#$%^&*()+|}{":?><,./;[]')
     password = ''
 print("Here are your passwords:")
 for x in passwordArray:
     print(str(passwordConstructCounter) + ". " + x)
     passwordConstructCounter += 1
 wait_for_input()
-#add fix for if input all of chars, just a quick if check
-#put removed char versions into an array
 #add file i/o
 
